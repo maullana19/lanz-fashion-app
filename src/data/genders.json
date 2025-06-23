@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "slug": "unisex",
+    "titleGender": "Unisex"
+  },
+  {
+    "id": 2,
+    "slug": "male",
+    "titleGender": "Male"
+  },
+  {
+    "id": 3,
+    "slug": "female",
+    "titleGender": "Female"
+  },
+  {
+    "id": 4,
+    "slug": "kids",
+    "titleGender": "Children"
+  }
+]

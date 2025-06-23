@@ -1,13 +1,13 @@
 <script setup lang="ts">
 /* ------------------------------- IMPORT DATA ------------------------------ */
-import { fashionProducts } from '@/data/products'
+import product from '@/data/product.json'
 import DetailProductSection from '@/components/sections/DetailProductSection.vue'
 import { useRoute } from 'vue-router'
 
 /* ----------------------------- LOGIC STATEMENT ---------------------------- */
 const route = useRoute()
 const slug = route.params.slug as string
-const productData = fashionProducts.find((item) => item.slug === slug)
+const productData = product.find((item) => item.slug === slug)
 </script>
 
 <template>

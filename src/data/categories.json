@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "slug": "t_shirt",
+    "titleCategories": "T-Shirt"
+  },
+  {
+    "id": 2,
+    "slug": "shirts",
+    "titleCategories": "Shirts"
+  },
+  {
+    "id": 3,
+    "slug": "short_pants",
+    "titleCategories": "Short pants"
+  },
+  {
+    "id": 4,
+    "slug": "long_pants",
+    "titleCategories": "Long pants"
+  },
+  {
+    "id": 5,
+    "slug": "kids",
+    "titleCategories": "Children"
+  },
+  {
+    "id": 6,
+    "slug": "shoes",
+    "titleCategories": "Shoes"
+  },
+  {
+    "id": 7,
+    "slug": "sandals",
+    "titleCategories": "Sandals"
+  },
+  {
+    "id": 8,
+    "slug": "accessories",
+    "titleCategories": "Accessories"
+  }
+]

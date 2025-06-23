@@ -36,11 +36,11 @@ function isStepActive(value: string) {
 </script>
 
 <template>
-  <section class="min-h-screen py-12 px-12">
+  <section class="px-4 md:px-0 py-6">
     <Card>
       <CardContent>
         <div class="mx-auto mb-7">
-          <h2 class="text-xl font-bold mb-4 text-center">Status Pengiriman</h2>
+          <h2 class="text-xl font-bold mb-4 text-center">Delivery Status</h2>
           <div class="flex items-center justify-between">
             <template v-for="(step, idx) in shippingSteps" :key="step.value">
               <div class="flex flex-col items-center flex-1">
@@ -76,11 +76,11 @@ function isStepActive(value: string) {
             <TableCaption>A list of your recent invoices.</TableCaption>
             <TableHeader>
               <TableRow>
-                <TableHead> Nama</TableHead>
-                <TableHead>Alamat</TableHead>
-                <TableHead>Metode Pembayaran</TableHead>
-                <TableHead> No.Resi </TableHead>
-                <TableHead class="text-right"> Total Harga </TableHead>
+                <TableHead> Name</TableHead>
+                <TableHead>Address</TableHead>
+                <TableHead>Payment Method</TableHead>
+                <TableHead> Number.Resi </TableHead>
+                <TableHead class="text-right"> Total Amount </TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -94,7 +94,7 @@ function isStepActive(value: string) {
                   {{ getDataSessionStorage.card_number }}xxxx</TableCell
                 >
                 <TableCell>{{ randNumberForResi }}</TableCell>
-                <TableCell class="text-right text-amber-700"
+                <TableCell class="text-right font-bold"
                   >Rp {{ getDataSessionStorage.product_price }}</TableCell
                 >
               </TableRow>
@@ -104,7 +104,7 @@ function isStepActive(value: string) {
       </CardContent>
       <CardFooter>
         <Button as-child>
-          <a href="/">Kembali</a>
+          <a href="/">Shopping again?</a>
         </Button>
       </CardFooter>
     </Card>

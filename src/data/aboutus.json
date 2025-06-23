@@ -1,0 +1,22 @@
+[
+  {
+    "aboutUsData": {
+      "title": "About us",
+      "subtitle": "Lanz Fashion is a local to imported fashion brand that is committed to delivering quality, stylish, and comfortable products for everyone. We believe everyone deserves to look confident with their best style.",
+      "imageSrc": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80"
+    },
+    "vissionAndMissionData": {
+      "vission": "To be the leading local fashion brand that inspires a modern and positive lifestyle.",
+      "mission": [
+        "Presenting quality & affordable products",
+        "Providing the best service",
+        "Supporting the creativity of the nation's children"
+      ],
+      "values": [
+        "Honesty & Transparency",
+        "Innovation & Creativity",
+        "Care for the Environment"
+      ]
+    }
+  }
+]

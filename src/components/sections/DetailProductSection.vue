@@ -1,7 +1,7 @@
 <script setup lang="ts">
 /* ------------------------ IMPORT ALL DATA STATEMENT ----------------------- */
 import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { useRouter, RouterLink } from 'vue-router'
 import { Button } from '@/components/ui/button'
 import {
   Breadcrumb,
@@ -58,7 +58,6 @@ const props = defineProps<{
   nameProduct?: string
   priceProduct?: number
   imageProduct: string[]
-  brandNameProduct: string
   descriptionProduct: string
   discountProduct?: number
   sizesProduct: string[]
@@ -70,7 +69,7 @@ const props = defineProps<{
 // FUNCTION HANDLE CHECKOUT
 function submitCheckOut() {
   if (!buyerName.value || !buyerAddress.value || !payMethod.value) {
-    toast('Tolong isi semua data yang tersedia!')
+    toast('Please fill in all the data provided!')
   } else {
     const dataStorage = {
       product_name: props.nameProduct,
@@ -83,10 +82,10 @@ function submitCheckOut() {
 
     sessionStorage.setItem('dataStorage', JSON.stringify(dataStorage))
 
-    toast('Sukses!', {
+    toast('Success..', {
       description: `${datesFormatted}` + '-' + `${props.nameProduct}`,
       action: {
-        label: 'Cek Resi',
+        label: 'Check Resi',
         onClick: () => router.push('/success-page'),
       },
     })
@@ -136,17 +135,16 @@ function submitCheckOut() {
       <div class="flex flex-col space-y-4">
         <div class="flex flex-col gap-2">
           <div class="flex gap-3">
-            <Badge class="bg-amber-700">{{ brandNameProduct }}</Badge>
-            <Badge class="bg-amber-700">Diskon {{ discountProduct }}%</Badge>
-            <Badge class="bg-amber-700">{{ materialProduct }}</Badge>
+            <Badge>Discount -{{ discountProduct }}%</Badge>
+            <Badge>{{ materialProduct }}</Badge>
           </div>
 
           <h1 class="text-2xl font-bold">{{ nameProduct }}</h1>
-          <p class="text-gray-600">{{ descriptionProduct }}</p>
+          <p class="text-muted-foreground">{{ descriptionProduct }}</p>
         </div>
 
         <div class="flex flex-col space-y-3">
-          <span class="line-through text-gray-400 text-sm">
+          <span class="line-through text-muted-foreground text-sm">
             Rp{{ (priceProduct ?? 0).toLocaleString() }}
           </span>
           <h4 class="text-2xl font-bold text-primary">
@@ -154,10 +152,9 @@ function submitCheckOut() {
           </h4>
 
           <div v-if="sizesProduct.length">
-            <h1 class="mb-2">Pilih Size</h1>
-            <div class="flex gap-2">
+            <h1 class="mb-2 text-muted-foreground font-semibold">Choose Size</h1>
+            <div class="flex gap-3.5">
               <Button
-                size="sm"
                 :variant="store.selectedSize === size ? 'default' : 'outline'"
                 v-for="size in sizesProduct"
                 :key="size"
@@ -170,10 +167,9 @@ function submitCheckOut() {
           </div>
 
           <div v-if="colorProduct.length">
-            <h1 class="mb-2">Pilih Warna</h1>
+            <h1 class="mb-2 text-muted-foreground font-semibold">Choose Color</h1>
             <div class="flex gap-3">
               <Button
-                size="sm"
                 :variant="store.selectedColor === color ? 'default' : 'outline'"
                 v-for="color in colorProduct"
                 :key="color"
@@ -188,15 +184,15 @@ function submitCheckOut() {
         <hr />
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <Button as-child class="cursor-pointer w-full" variant="outline"
-            ><a href="/"
+            ><RouterLink to="/"
               >Cancel <span><CircleX /></span
-            ></a>
+            ></RouterLink>
           </Button>
 
           <!-- FORM CHECKOUT -->
           <Dialog>
             <DialogTrigger>
-              <Button class="cursor-pointer w-full bg-amber-700"
+              <Button class="cursor-pointer w-full"
                 >Checkout <span><ArrowRight /></span
               ></Button>
             </DialogTrigger>
@@ -204,16 +200,16 @@ function submitCheckOut() {
               <DialogHeader>
                 <DialogTitle>Checkout Form</DialogTitle>
                 <DialogDescription>
-                  Pastikan data pesanan sudah benar sebelum melanjutkan pembayaran.
+                  Make sure the order data is correct before continuing the payment.
                 </DialogDescription>
 
                 <div class="space-y-3 py-2">
                   <div class="flex justify-between">
-                    <span class="font-semibold">Produk</span>
+                    <span class="font-semibold">Product</span>
                     <span class="italic">{{ nameProduct }}</span>
                   </div>
                   <div class="flex justify-between">
-                    <span class="font-semibold">Harga</span>
+                    <span class="font-semibold">Price</span>
                     <span class="italic"
                       >Rp{{
                         ((priceProduct ?? 0) * (1 - (discountProduct || 0) / 100)).toLocaleString()
@@ -225,19 +221,19 @@ function submitCheckOut() {
                     <span class="italic">{{ store.selectedSize || '-' }}</span>
                   </div>
                   <div class="flex justify-between">
-                    <span class="font-semibold">Warna</span>
+                    <span class="font-semibold">Color</span>
                     <span class="italic">{{ store.selectedColor || '-' }}</span>
                   </div>
                   <hr />
                   <!-- INPUT NAME  -->
                   <div class="space-y-3">
-                    <Label for="person">Nama Penerima</Label>
-                    <Input id="person" v-model="buyerName" type="text" placeholder="Nama Anda" />
+                    <Label for="person">Recipient name</Label>
+                    <Input id="person" v-model="buyerName" type="text" />
                   </div>
                   <!-- INPUT ADDRESS -->
                   <div class="space-y-3 mb-3">
-                    <Label>Alamat</Label>
-                    <Textarea v-model="buyerAddress" placeholder="Alamat Lengkap"></Textarea>
+                    <Label>Address</Label>
+                    <Textarea v-model="buyerAddress"></Textarea>
                   </div>
                   <!-- INPUT PAYMENT METHOD -->
                   <div class="grid grid-cols-2 items-center gap-3">

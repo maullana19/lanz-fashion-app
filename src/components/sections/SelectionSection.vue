@@ -1,6 +1,7 @@
 <script setup lang="ts">
 /* ---------------------------- IMPORT STATEMENT ---------------------------- */
 import { useProductStore } from '@/stores/productStore'
+import programs from '@/data/programs.json'
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -10,7 +11,7 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader } from '@/components/ui/card'
+import { Card, CardContent, CardHeader, CardFooter } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import {
   Select,
@@ -38,22 +39,22 @@ function formatPrice(price: number): string {
       <Breadcrumb>
         <BreadcrumbList class="font-bold">
           <BreadcrumbItem>
-            <BreadcrumbLink href="/"> Home </BreadcrumbLink>
+            <BreadcrumbLink href="#"> Home </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbPage>Selection</BreadcrumbPage>
+            <BreadcrumbPage>Shop</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-4 gap-3">
-      <aside class="flex flex-col space-y-3 lg:sticky lg:top-24 self-start h-screen overflow-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
+      <aside class="flex flex-col space-y-3 lg:sticky top-2 lg:top-24 self-start overflow-hidden">
         <!-- SELECT CATEGORY -->
         <Card>
           <CardHeader>
-            <h1 class="font-semibold">Category</h1>
+            <h1 class="font-semibold text-muted-foreground">Category</h1>
           </CardHeader>
           <CardContent>
             <Select v-model="store.selectedCategory">
@@ -72,7 +73,7 @@ function formatPrice(price: number): string {
                     :value="category.slug"
                     @click="store.selectedCategory = category.slug"
                   >
-                    {{ category.name }} ({{ category.count }})
+                    {{ category.titleCategories }}
                   </SelectItem>
                 </SelectGroup>
               </SelectContent>
@@ -80,47 +81,62 @@ function formatPrice(price: number): string {
           </CardContent>
         </Card>
 
-        <!-- SELECT Brand -->
+        <!-- SELECT BRAND -->
         <Card>
           <CardHeader>
-            <h1 class="font-semibold">Select Brand</h1>
+            <h1 class="font-semibold text-muted-foreground">Select Brand</h1>
           </CardHeader>
           <CardContent>
-            <Select v-model="store.selectedBrand">
+            <Select>
               <SelectTrigger class="w-full">
                 <SelectValue placeholder="Select a brand" />
               </SelectTrigger>
               <SelectContent>
                 <SelectGroup>
-                  <SelectLabel class="text-gray-400 font-semibold"> Choose your brand </SelectLabel>
-                  <SelectItem value="all">All</SelectItem>
-                  <SelectItem
-                    v-for="brand in store.brandCategory"
-                    :key="brand.id"
-                    :value="brand.slug"
-                    @click="store.selectedBrand = brand.slug"
-                  >
-                    {{ brand.namebrand }}
-                  </SelectItem>
+                  <SelectLabel class="text-muted-foreground font-semibold">
+                    Coming soon
+                  </SelectLabel>
                 </SelectGroup>
               </SelectContent>
             </Select>
           </CardContent>
         </Card>
+
+        <!-- RESELLER PROGRAM -->
+        <Card>
+          <CardContent>
+            <div class="space-y-4">
+              <h1 class="font-semibold">
+                {{ programs[0].resellerProgramContent.title }}
+              </h1>
+
+              <ul
+                v-for="(contentList, idx) in programs[0].resellerProgramContent.listContent"
+                :key="idx"
+                class="list-disc text-sm line-clamp-1"
+              >
+                <li>{{ contentList }}</li>
+              </ul>
+            </div>
+          </CardContent>
+          <CardFooter>
+            <Button class="w-full hover:cursor-pointer"> Learn more </Button>
+          </CardFooter>
+        </Card>
       </aside>
 
       <div class="col-span-3 p-2">
         <div class="flex justify-between items-center mb-2">
-          <div class="flex flex-wrap gap-4">
+          <div class="flex flex-row overflow-x-auto gap-4">
+            <!-- GENDER SELECT -->
             <Button
-              v-for="gender in store.genderCategory"
+              v-for="gender in store.genders"
               :key="gender.id"
               :value="gender.slug"
               @click="store.selectGenders = gender.slug"
               :variant="store.selectGenders === gender.slug ? 'default' : 'secondary'"
-              size="sm"
               class="cursor-pointer"
-              >{{ gender.name }}</Button
+              >{{ gender.titleGender }}</Button
             >
           </div>
           <div>
@@ -132,9 +148,9 @@ function formatPrice(price: number): string {
               <SelectContent>
                 <SelectGroup>
                   <SelectLabel class="text-muted">Sort by</SelectLabel>
-                  <SelectItem value="popular">Populer</SelectItem>
+                  <SelectItem value="popular">Popular</SelectItem>
                   <SelectItem value="trend">Trending</SelectItem>
-                  <SelectItem value="lowest_price">Harga Terendah</SelectItem>
+                  <SelectItem value="lowest_price">Low Price</SelectItem>
                 </SelectGroup>
               </SelectContent>
             </Select>
@@ -144,7 +160,13 @@ function formatPrice(price: number): string {
 
         <div class="py-6">
           <!-- LIST OF PRODUCT -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            v-if="store.sortedProducts.length === 0"
+            class="text-center text-muted-foreground py-12"
+          >
+            The product was not found.
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             <Card
               v-for="product in store.sortedProducts"
               :key="product.id"
@@ -156,9 +178,9 @@ function formatPrice(price: number): string {
                   :alt="product.name"
                   class="h-48 w-full object-cover rounded"
                 />
-                <Badge class="absolute right-0 top-2 rounded-none" variant="destructive">{{
-                  product.brandName
-                }}</Badge>
+                <Badge class="absolute right-0 top-2 rounded-none bg-primary"
+                  >-{{ product.discount }}%</Badge
+                >
 
                 <div class="py-3 flex flex-col space-y-5 flex-1 mb-2">
                   <h3 class="font-bold line-clamp-1">{{ product.name }}</h3>
@@ -167,15 +189,19 @@ function formatPrice(price: number): string {
                     <span class="text-primary font-bold">
                       {{ formatPrice(product.price * (1 - (product.discount || 0) / 100)) }}
                     </span>
-                    <span v-if="product.discount" class="text-red-700 line-through text-xs">
-                      {{ formatPrice(product.price) }}
+                    <span v-if="product.discount" class="line-through text-muted-foreground">
+                      <small>{{ formatPrice(product.price) }}</small>
                     </span>
                   </div>
                 </div>
 
                 <!-- BUTTON ORDER -->
                 <RouterLink :to="`/products/${product.slug}`" class="mt-auto">
-                  <Button size="sm" class="w-full cursor-pointer">Order</Button>
+                  <Button
+                    variant="outline"
+                    class="w-full cursor-pointer hover:bg-primary hover:text-white"
+                    >Order</Button
+                  >
                 </RouterLink>
               </CardContent>
             </Card>

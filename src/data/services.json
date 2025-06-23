@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Fashion Consultation",
+    "subtitle": "Get style and mix & match advice directly from our professional stylists, free for all customers.",
+    "icons": "MessageCircleMore"
+  },
+  {
+    "id": 2,
+    "title": "Fast Shipping",
+    "subtitle": "Your order will be processed and shipped within 24 hours with a wide selection of trusted expeditions.",
+    "icons": "FastForward"
+  },
+  {
+    "id": 3,
+    "title": "Product Warranty",
+    "subtitle": "Our fashion products have a 7-day exchange/return guarantee if they are not suitable or have manufacturing defects.",
+    "icons": "History"
+  }
+]

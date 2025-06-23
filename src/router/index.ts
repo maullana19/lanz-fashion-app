@@ -5,6 +5,8 @@ import AboutUsView from '@/views/AboutUsView.vue'
 import LoginView from '@/views/LoginView.vue'
 import ProductDetailView from '@/views/ProductDetailView.vue'
 import SucessView from '@/views/SucessView.vue'
+import ServiceView from '@/views/ServiceView.vue'
+import NotFound from '@/views/NotFound.vue'
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -38,6 +40,13 @@ const router = createRouter({
       component: SucessView,
       meta: { requiresAuth: false },
     },
+    {
+      path: '/service',
+      name: 'Service',
+      component: ServiceView,
+      meta: { requiresAuth: false },
+    },
+    { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
   ],
 })
 

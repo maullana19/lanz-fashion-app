@@ -17,17 +17,17 @@ const images = [
     id: 1,
     title: 'Elegant Monochrome Collection',
     subtitle:
-      'Temukan kemewahan dalam kesederhanaan dengan koleksi monokrom kami. Warna hitam-putih yang timeless dipadukan dengan potongan modern menciptakan siluet yang sophisticated untuk segala occasion.',
-    src: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Gambar alam 1',
+      'Discover luxury in simplicity with our monochrome collection. The timeless purple color combined with modern cuts creates a sophisticated silhouette for any occasion.',
+    src: 'https://images.unsplash.com/photo-1595446472569-42bbc8de9aaf?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    alt: 'unsplash.com',
   },
   {
     id: 2,
     title: 'Tropical Vibrance (Summer Edition)',
     subtitle:
       'Hadapi musim panas dengan gaya! Koleksi ini menampilkan warna-warna cerah dan motif tropis yang segar, dibuat dari bahan breathable untuk kenyamanan maksimal di bawah terik matahari.',
-    src: 'https://images.unsplash.com/photo-1508427953056-b00b8d78ebf5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Gambar alam 2',
+    src: 'https://images.unsplash.com/photo-1633767448607-64876fa0978e?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    alt: 'unsplash.com',
   },
   {
     id: 3,
@@ -35,8 +35,8 @@ const images = [
     subtitle:
       'Streetwear dengan sentuhan high-fashion. Jaket oversized, celana cargo utilitarian, dan sneakers limited edition. sempurna untuk gaya urban yang edgy namun tetap functional.',
 
-    src: 'https://images.unsplash.com/photo-1507702553912-a15641e827c8?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Tamara Bellis - unsplash',
+    src: 'https://images.unsplash.com/photo-1649864730872-fb7a9a01b6e8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    alt: 'unsplash.com',
   },
 ]
 

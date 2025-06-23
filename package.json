@@ -1,6 +1,6 @@
 {
   "name": "lanz-fashion",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -14,15 +14,13 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix",
-    "format": "prettier --write src/",
-    "deploy": "gh-pages -d dist",
-    "homepage": "https://maullana19.github.io/lanz-fashion-app"
+    "format": "prettier --write src/"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.7",
     "@tanstack/vue-table": "^8.21.3",
     "@vee-validate/zod": "^4.15.0",
-    "@vueuse/core": "^13.3.0",
+    "@vueuse/core": "^13.4.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "embla-carousel-vue": "^8.6.0",
