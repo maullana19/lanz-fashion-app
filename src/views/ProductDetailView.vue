@@ -16,7 +16,6 @@ const productData = product.find((item) => item.slug === slug)
     :nameProduct="productData?.name"
     :priceProduct="productData?.price"
     :imageProduct="productData?.images ?? []"
-    :brandNameProduct="productData?.brandName ?? ''"
     :descriptionProduct="productData?.description ?? ''"
     :discountProduct="productData?.discount"
     :sizesProduct="productData?.size ?? []"
