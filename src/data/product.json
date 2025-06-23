@@ -3,32 +3,19 @@
     "id": 1,
     "slug": "White-Hotel-T-Shirt-Text",
     "name": "White Hotel T-Shirt Text",
-    "category": [
-      "t_shirt"
-    ],
+    "category": ["t_shirt"],
     "price": 249000,
     "discount": 9,
-    "size": [
-      "S",
-      "M",
-      "L",
-      "XL"
-    ],
-    "colors": [
-      "white"
-    ],
+    "size": ["S", "M", "L", "XL"],
+    "colors": ["white"],
     "description": "Premium 100% cotton t-shirt is comfortable to wear all day.",
-    "images": [
-      "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9"
-    ],
+    "images": ["https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9"],
     "stock": 42,
     "rating": 4.6,
     "isNew": true,
     "material": "Cotton",
     "gender": "unisex",
-    "tags": [
-      "t-shirt"
-    ],
+    "tags": ["t-shirt"],
     "popularity": 52,
     "trendScore": 55
   },
@@ -36,20 +23,11 @@
     "id": 2,
     "slug": "premium-cotton-black-t-shirt",
     "name": "Premium cotton black T-shirt in cool fabric",
-    "category": [
-      "t_shirt"
-    ],
+    "category": ["t_shirt"],
     "price": 249000,
     "discount": 15,
-    "size": [
-      "S",
-      "M",
-      "L",
-      "XL"
-    ],
-    "colors": [
-      "black"
-    ],
+    "size": ["S", "M", "L", "XL"],
+    "colors": ["black"],
     "description": "Premium 100% cotton t-shirt is comfortable to wear all day.",
     "images": [
       "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -59,9 +37,7 @@
     "isNew": true,
     "material": "Cotton",
     "gender": "male",
-    "tags": [
-      "t-shirt"
-    ],
+    "tags": ["t-shirt"],
     "popularity": 42,
     "trendScore": 20
   },
@@ -69,19 +45,11 @@
     "id": 3,
     "slug": "premium-cotton-long-sleeve-t-shirt",
     "name": "Pemium cotton long sleeve t-shirt",
-    "category": [
-      "t_shirt"
-    ],
+    "category": ["t_shirt"],
     "price": 212000,
     "discount": 7,
-    "size": [
-      "S",
-      "M",
-      "L"
-    ],
-    "colors": [
-      "white"
-    ],
+    "size": ["S", "M", "L"],
+    "colors": ["white"],
     "description": "Premium 100% cotton t-shirt is comfortable to wear all day.",
     "images": [
       "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=1072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -91,9 +59,7 @@
     "isNew": true,
     "material": "Cotton",
     "gender": "unisex",
-    "tags": [
-      "t-shirt"
-    ],
+    "tags": ["t-shirt"],
     "popularity": 42,
     "trendScore": 20
   },
@@ -101,22 +67,11 @@
     "id": 4,
     "slug": "Cheap-package-t-shirts-can-be-4-pcs-blook-brand",
     "name": "Cheap package t-shirts can be 4 pcs blook brand",
-    "category": [
-      "t_shirt"
-    ],
+    "category": ["t_shirt"],
     "price": 122000,
     "discount": 5,
-    "size": [
-      "S",
-      "M",
-      "L",
-      "XL"
-    ],
-    "colors": [
-      "white",
-      "black",
-      "brown"
-    ],
+    "size": ["S", "M", "L", "XL"],
+    "colors": ["white", "black", "brown"],
     "description": "Please note this purchase is only valid for members or resellers who register with us.",
     "images": [
       "https://images.unsplash.com/photo-1716541424893-734612ddcabb?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -126,9 +81,7 @@
     "isNew": true,
     "material": "Cotton",
     "gender": "unisex",
-    "tags": [
-      "t-shirt"
-    ],
+    "tags": ["t-shirt"],
     "popularity": 42,
     "trendScore": 20
   },
@@ -136,20 +89,11 @@
     "id": 5,
     "slug": "Flatlay-view-of-a-blank-white-t-shirt",
     "name": "Flatlay view of a blank white-t-shirt",
-    "category": [
-      "t_shirt"
-    ],
+    "category": ["t_shirt"],
     "price": 212000,
     "discount": 7,
-    "size": [
-      "S",
-      "M",
-      "L",
-      "XL"
-    ],
-    "colors": [
-      "white"
-    ],
+    "size": ["S", "M", "L", "XL"],
+    "colors": ["white"],
     "description": "Premium 100% cotton t-shirt is comfortable to wear all day.",
     "images": [
       "https://images.unsplash.com/photo-1618677603544-51162346e165?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -159,9 +103,7 @@
     "isNew": true,
     "material": "Cotton",
     "gender": "female",
-    "tags": [
-      "t-shirt"
-    ],
+    "tags": ["t-shirt"],
     "popularity": 42,
     "trendScore": 20
   },
@@ -169,20 +111,11 @@
     "id": 6,
     "slug": "genuine0premium0levis0material0pants",
     "name": "Genuine premium levis material pants",
-    "category": [
-      "long_pants"
-    ],
+    "category": ["long_pants"],
     "price": 512000,
     "discount": 8,
-    "size": [
-      "30",
-      "31",
-      "32",
-      "33"
-    ],
-    "colors": [
-      "black"
-    ],
+    "size": ["30", "31", "32", "33"],
+    "colors": ["black"],
     "description": "Premium 100% levis longs pants is comfortable to wear all day.",
     "images": [
       "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?q=80&w=697&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -192,9 +125,7 @@
     "isNew": true,
     "material": "Levis",
     "gender": "unisex",
-    "tags": [
-      "long_pants"
-    ],
+    "tags": ["long_pants"],
     "popularity": 24,
     "trendScore": 22
   }

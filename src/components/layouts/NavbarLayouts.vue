@@ -42,6 +42,7 @@ const router = useRouter()
 // FOR INPUT SEARCH POSITION
 const SHEET_SIDES = ['top'] as const
 
+// Handle Logout User
 const handleLogout = () => {
   authStore.logout()
   router.push('/login')
