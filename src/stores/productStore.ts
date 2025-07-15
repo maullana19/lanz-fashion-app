@@ -10,18 +10,25 @@ export const useProductStore = defineStore('product', () => {
   const selectGenders = ref('unisex')
   const selectedCategory = ref('all')
   const sortBy = ref('default')
+  const sizeSelect = ref('all')
   const selectedSize = ref<string | null>(null)
   const selectedColor = ref<string | null>(null)
 
-  // Filter by category & brand
+  // Filterization process
   const filteredProducts = computed(() => {
-    let dataProduct = product
+    let dataProduct = [...product]
 
     if (selectedCategory.value !== 'all') {
       dataProduct = dataProduct.filter((p) =>
         Array.isArray(p.category)
           ? p.category.includes(selectedCategory.value)
           : p.category === selectedCategory.value,
+      )
+    }
+
+    if (sizeSelect.value !== 'all') {
+      dataProduct = dataProduct.filter((p) =>
+        Array.isArray(p.size) ? p.size.includes(sizeSelect.value) : p.size === sizeSelect.value,
       )
     }
 
@@ -47,6 +54,7 @@ export const useProductStore = defineStore('product', () => {
 
   return {
     selectedCategory,
+    sizeSelect,
     genders,
     selectedSize,
     sortBy,

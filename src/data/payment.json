@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "Debit",
+    "values": "debt"
+  },
+  {
+    "id": 2,
+    "title": "Credit",
+    "values": "credit"
+  },
+  {
+    "id": 3,
+    "title": "QRIS",
+    "values": "qris"
+  }
+]

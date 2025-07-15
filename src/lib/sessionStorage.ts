@@ -4,7 +4,7 @@ export function useSessionStorage<T>(key: string, defaultValue: T) {
   const storedValue = sessionStorage.getItem(key)
   const data = ref<T>(storedValue ? JSON.parse(storedValue) : defaultValue)
 
-  // Sync perubahan ke sessionStorage
+  // Sync into the sessionStorage
   watch(
     data,
     (newVal) => {

@@ -3,7 +3,7 @@
 import { useSearchStore } from '@/stores/searchStore'
 import {
   HeartPlus,
-  LogIn,
+  User,
   Store,
   CircleAlert,
   HandHeart,
@@ -164,8 +164,8 @@ const handleLogout = () => {
         </DropdownMenuContent>
       </DropdownMenu>
 
-      <Button v-if="!authStore.user" data-testid="login-button" as-child>
-        <RouterLink to="/login" active-class="pointer-event-none"><LogIn /> Login </RouterLink>
+      <Button v-if="!authStore.user" data-testid="login-button" size="icon" as-child>
+        <RouterLink to="/login" active-class="pointer-event-none"><User /></RouterLink>
       </Button>
       <DropdownMenu v-else>
         <DropdownMenuTrigger> {{ authStore.user.name }}</DropdownMenuTrigger>

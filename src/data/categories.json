@@ -11,31 +11,36 @@
   },
   {
     "id": 3,
+    "slug": "jacket",
+    "titleCategories": "Jacket"
+  },
+  {
+    "id": 4,
     "slug": "short_pants",
     "titleCategories": "Short pants"
   },
   {
-    "id": 4,
+    "id": 5,
     "slug": "long_pants",
     "titleCategories": "Long pants"
   },
   {
-    "id": 5,
+    "id": 6,
     "slug": "kids",
     "titleCategories": "Children"
   },
   {
-    "id": 6,
+    "id": 7,
     "slug": "shoes",
     "titleCategories": "Shoes"
   },
   {
-    "id": 7,
+    "id": 8,
     "slug": "sandals",
     "titleCategories": "Sandals"
   },
   {
-    "id": 8,
+    "id": 9,
     "slug": "accessories",
     "titleCategories": "Accessories"
   }

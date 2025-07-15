@@ -40,7 +40,7 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import { Pagination } from 'swiper/modules'
 import { useProductStore } from '@/stores/productStore'
-import { paymentMethod } from '@/data/payments'
+import payment from '@/data/payment.json'
 import { datesFormatted } from '@/lib/dateFormater'
 
 /* ----------------------------- LOGIC STATEMENT ---------------------------- */
@@ -94,7 +94,7 @@ function submitCheckOut() {
 </script>
 
 <template>
-  <div class="container mx-auto px-3 lg:px-0 py-8">
+  <div class="container mx-auto px-3 lg:px-0 py-8 h-screen">
     <div class="mb-6">
       <Breadcrumb>
         <BreadcrumbList>
@@ -115,8 +115,8 @@ function submitCheckOut() {
       </Breadcrumb>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-      <!-- Gambar Produk Carousel -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-21">
+      <!-- CAROUSEL IMAGES PRODUCT -->
       <div class="bg-white rounded-xl overflow-hidden shadow-md">
         <Swiper
           :pagination="true"
@@ -181,7 +181,7 @@ function submitCheckOut() {
             </div>
           </div>
         </div>
-        <hr />
+        <br />
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <Button as-child class="cursor-pointer w-full" variant="outline"
             ><RouterLink to="/"
@@ -203,7 +203,7 @@ function submitCheckOut() {
                   Make sure the order data is correct before continuing the payment.
                 </DialogDescription>
 
-                <div class="space-y-3 py-2">
+                <div class="space-y-4 py-2">
                   <div class="flex justify-between">
                     <span class="font-semibold">Product</span>
                     <span class="italic">{{ nameProduct }}</span>
@@ -227,18 +227,18 @@ function submitCheckOut() {
                   <hr />
                   <!-- INPUT NAME  -->
                   <div class="space-y-3">
-                    <Label for="person">Recipient name</Label>
+                    <Label for="person" class="text-muted-foreground">Recipient name</Label>
                     <Input id="person" v-model="buyerName" type="text" />
                   </div>
                   <!-- INPUT ADDRESS -->
-                  <div class="space-y-3 mb-3">
-                    <Label>Address</Label>
+                  <div class="space-y-3">
+                    <Label for="buyerAddress" class="text-muted-foreground">Address</Label>
                     <Textarea v-model="buyerAddress"></Textarea>
                   </div>
                   <!-- INPUT PAYMENT METHOD -->
-                  <div class="grid grid-cols-2 items-center gap-3">
+                  <div class="grid grid-cols-1 items-center gap-3">
                     <div class="w-full">
-                      <Label class="space-y-3 mb-3">Payment</Label>
+                      <Label class="space-y-3 mb-3 text-muted-foreground">Payment</Label>
                       <Select v-model="payMethod">
                         <SelectTrigger class="w-full">
                           <SelectValue placeholder="Select a payment" />
@@ -246,11 +246,7 @@ function submitCheckOut() {
                         <SelectContent>
                           <SelectGroup>
                             <SelectLabel class="font-semibold">Select payment method</SelectLabel>
-                            <SelectItem
-                              v-for="pay in paymentMethod"
-                              :key="pay.id"
-                              :value="pay.title"
-                            >
+                            <SelectItem v-for="pay in payment" :key="pay.id" :value="pay.title">
                               {{ pay.title }}
                             </SelectItem>
                           </SelectGroup>

@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "label": "Accepted by seller",
+    "value": "received"
+  },
+  {
+    "id": 2,
+    "label": "In process",
+    "value": "processing"
+  },
+  {
+    "id": 3,
+    "label": "On delivery",
+    "value": "shipped"
+  },
+  {
+    "id": 4,
+    "label": "To the destination",
+    "value": "delivered"
+  }
+]

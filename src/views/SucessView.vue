@@ -22,10 +22,10 @@ const getDataSessionStorage = dataStorageRaw ? JSON.parse(dataStorageRaw) : null
 const currentStatus = ref('shipped')
 
 const shippingSteps = [
-  { label: 'Diterima Penjual', value: 'received' },
-  { label: 'Diproses', value: 'processing' },
-  { label: 'Dikirim', value: 'shipped' },
-  { label: 'Sampai Tujuan', value: 'delivered' },
+  { label: 'Accepted by seller', value: 'received' },
+  { label: 'In process', value: 'processing' },
+  { label: 'On delivery', value: 'shipped' },
+  { label: 'To the destination', value: 'delivered' },
 ]
 
 function isStepActive(value: string) {
@@ -61,7 +61,7 @@ function isStepActive(value: string) {
                   {{ step.label }}
                 </span>
               </div>
-              <!-- Garis penghubung antar step -->
+              <!-- Line Border Step -->
               <div
                 v-if="idx < shippingSteps.length - 1"
                 class="flex-1 h-1"

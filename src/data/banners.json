@@ -5,5 +5,33 @@
       "subtitles": "Discover luxury in simplicity with our monochrome collection. The timeless purple color combined with modern cuts creates a sophisticated silhouette for any occasion.",
       "imageSrc": "https://images.unsplash.com/photo-1595446472569-42bbc8de9aaf?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
+  },
+  {
+    "jumbotron_content": [
+      {
+        "id": 1,
+        "title": "Elegant Monochrome Collection",
+        "subtitle": "Discover luxury in simplicity with our monochrome collection. Timeless, modern, and always in style.",
+        "img_src": "https://images.unsplash.com/photo-1595446472569-42bbc8de9aaf?q=80&w=1170&auto=format&fit=crop",
+        "cta": "Shop Now",
+        "ctaLink": "#"
+      },
+      {
+        "id": 2,
+        "title": "Tropical Vibrance",
+        "subtitle": "Vibrant colors and fresh tropical prints for your summer adventure.",
+        "img_src": "https://images.unsplash.com/photo-1633767448607-64876fa0978e?q=80&w=1331&auto=format&fit=crop",
+        "cta": "See Collection",
+        "ctaLink": "#"
+      },
+      {
+        "id": 3,
+        "title": "Urban Explorer",
+        "subtitle": "Streetwear with a high-fashion twist. Perfect for an edgy yet functional urban style.",
+        "img_src": "https://images.unsplash.com/photo-1649864730872-fb7a9a01b6e8?q=80&w=1170&auto=format&fit=crop",
+        "cta": "Explore",
+        "ctaLink": "#"
+      }
+    ]
   }
 ]

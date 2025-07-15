@@ -7,6 +7,7 @@ import ProductDetailView from '@/views/ProductDetailView.vue'
 import SucessView from '@/views/SucessView.vue'
 import ServiceView from '@/views/ServiceView.vue'
 import NotFound from '@/views/NotFound.vue'
+import BrandsView from '@/views/BrandsView.vue'
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -44,6 +45,12 @@ const router = createRouter({
       path: '/service',
       name: 'Service',
       component: ServiceView,
+      meta: { requiresAuth: false },
+    },
+    {
+      path: '/brands',
+      name: 'Brands',
+      component: BrandsView,
       meta: { requiresAuth: false },
     },
     { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },

@@ -128,5 +128,115 @@
     "tags": ["long_pants"],
     "popularity": 24,
     "trendScore": 22
+  },
+  {
+    "id": 7,
+    "slug": "Plain-Short-Sleeve-T-Shirt-great",
+    "name": "Plain Short Sleeve T Shirt great",
+    "category": ["t_shirt"],
+    "price": 112000,
+    "discount": 4,
+    "size": ["S", "M", "L"],
+    "colors": ["black"],
+    "description": "Premium 100% cotton t-shirt is comfortable to wear all day.",
+    "images": [
+      "https://images.unsplash.com/photo-1618354691438-25bc04584c23?q=80&w=715&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "stock": 22,
+    "rating": 4.1,
+    "isNew": true,
+    "material": "Cotton",
+    "gender": "male",
+    "tags": ["t-shirt"],
+    "popularity": 24,
+    "trendScore": 52
+  },
+  {
+    "id": 8,
+    "slug": "Winter-jacket-or-for-traveling-events",
+    "name": "Winter jacket or for traveling events",
+    "category": ["jacket"],
+    "price": 612000,
+    "discount": 12,
+    "size": ["L", "XL"],
+    "colors": ["brown"],
+    "description": "Premium jacket ",
+    "images": [
+      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "stock": 12,
+    "rating": 4.5,
+    "isNew": true,
+    "material": "Jacket",
+    "gender": "male",
+    "tags": ["jacket"],
+    "popularity": 44,
+    "trendScore": 22
+  },
+  {
+    "id": 9,
+    "slug": "Original-long-sleeve-t-shirt",
+    "name": "Original long sleeve t-shirt",
+    "category": ["t_shirt"],
+    "price": 212000,
+    "discount": 6,
+    "size": ["M", "L", "XL"],
+    "colors": ["black"],
+    "description": "Premium slong sleve",
+    "images": [
+      "https://images.unsplash.com/photo-1618354691551-44de113f0164?q=80&w=715&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "stock": 66,
+    "rating": 4.5,
+    "isNew": true,
+    "material": "Jacket",
+    "gender": "male",
+    "tags": ["jacket"],
+    "popularity": 44,
+    "trendScore": 22
+  },
+  {
+    "id": 10,
+    "slug": "Premium-black-levis-blook-trousers",
+    "name": "Premium black levis blook trousers",
+    "category": ["long_pants"],
+    "price": 442500,
+    "discount": 9,
+    "size": ["29", "30", "31", "32"],
+    "colors": ["black", "#E14434"],
+    "description": "Premium levis blooks",
+    "images": [
+      "https://images.unsplash.com/photo-1718252540617-6ecda2b56b57?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "stock": 16,
+    "rating": 3.5,
+    "isNew": true,
+    "material": "Levis",
+    "gender": "male",
+    "tags": ["long_pants"],
+    "popularity": 12,
+    "trendScore": 33
+  },
+  {
+    "id": 11,
+    "slug": "Long-sleeve-shirt-for-formal-or-casual",
+    "name": "Long sleeve shirt for formal or casual",
+    "category": ["shirts"],
+    "price": 322500,
+    "discount": 4,
+    "size": ["S", "M", "XL"],
+    "colors": ["sky blue"],
+    "description": "Shirts with elegant patterns are suitable for daily life for formal or informal workers or suitable for parties with family or friends.",
+    "images": [
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "stock": 66,
+    "rating": 4.5,
+    "isNew": true,
+    "material": "Cotton",
+    "gender": "unisex",
+    "tags": ["shirts"],
+    "popularity": 52,
+    "trendScore": 23
   }
 ]

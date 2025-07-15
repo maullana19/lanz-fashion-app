@@ -1,0 +1,26 @@
+[
+  {
+    "brands_title": "LanzFashion.",
+    "title_copyright": "@ 2025 - LanzFashion.",
+    "note_content": "Disclaimer : This website is private, only for a portfolio and learning media.",
+    "information_links": [
+      {
+        "title_links": "Service",
+        "urls": "#"
+      },
+      {
+        "title_links": "Partner",
+        "urls": "#"
+      },
+      {
+        "title_links": "Customer Service",
+        "urls": "#"
+      },
+      {
+        "title_links": "Faq",
+        "urls": "#"
+      }
+    ],
+    "social_links": [{}]
+  }
+]

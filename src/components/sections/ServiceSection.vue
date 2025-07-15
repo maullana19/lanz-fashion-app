@@ -17,7 +17,7 @@ defineProps<{
 <template>
   <section class="bg-white py-12 px-4 h-screen">
     <div class="max-w-5xl mx-auto space-y-9">
-      <h2 class="text-2xl font-bold text-center text-primary">Our Services</h2>
+      <h2 class="text-4xl font-bold text-center text-primary">Our Services</h2>
 
       <!-- CARD LOOP -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
